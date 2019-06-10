@@ -44,13 +44,13 @@ Fun Bus wants you to make their site more interactive. They are relying on you t
 	* [X] `scroll`
 	* [ ] `select`-unsupported since there are no text boxes- For example, in HTML, select events can be dispatched only on form <input type="text"> and <textarea> elements.
 	* [X] `click`
-	* [] `dblclick`
+	* [X] `dblclick`
 
 
 Using the 10 unique events, find ways to update the DOM in creative ways. For example you could change colors, animate objects, remove objects, etc.
 
-* [X] Nest two similar events somewhere in the site and prevent the event propagation properly
-* [ ] Stop the navigation from items from refreshing the page by using `preventDefault()`
+* [ ] Nest two similar events somewhere in the site and prevent the event propagation properly
+* [X] Stop the navigation from items from refreshing the page by using `preventDefault()`
 
 ## Stretch Task:
 

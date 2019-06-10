@@ -1,4 +1,6 @@
 // Your code goes here
+
+//Load
 window.addEventListener("load", function(event){
   alert("Page is Loaded");
 
@@ -7,6 +9,7 @@ window.addEventListener("load", function(event){
   })
 })
 
+//Click
 const logoFunBus = document.querySelector(".logo-heading");
 logoFunBus.addEventListener("click", function(event){
   logoFunBus.style["background-color"] = "dodgerBlue";
@@ -15,23 +18,35 @@ logoFunBus.addEventListener("click", function(event){
   }, 200);
 })
 
-const navBarItems = document.querySelectorAll(".nav-link");
+//Mousover
+const navBarItems = document.querySelectorAll(".nav a");
 navBarItems.forEach(function(navItem) {
   navItem.addEventListener("mouseover", function(event) {
     navItem.style.color = "dodgerBlue";
   })
+  //Mouseout
   navItem.addEventListener("mouseout", function(event) {
     navItem.style.color = "#212529";
   })
+  //Prevent Default
+  navItem.addEventListener("click", function(event) {
+    event.preventDefault();
+  })
 })
 
+//Keydown
 window.addEventListener("keydown", function(event) {
   if (event.keyCode === 71) { //KeyCode 71 is letter G
     const letsGo = document.querySelector(".text-content h2")
    letsGo.textContent = "Already Went!"
+
+   window.setTimeout(function() {
+    letsGo.textContent = "Let's Go!";
+  }, 1500);
   }
 })
 
+//Scroll
 window.addEventListener('scroll', function(event) {
   logoFunBus.textContent = "Page was scrolled."
   window.setTimeout(function() {
@@ -39,7 +54,8 @@ window.addEventListener('scroll', function(event) {
    }, 1500);
 });
 
+//DoubleClick
 const adventureAwaits = document.querySelector(".img-content");
 adventureAwaits.addEventListener("dblclick", function(event) {
-  
+  adventureAwaits.style.display = "none";
 })
