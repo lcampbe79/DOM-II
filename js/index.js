@@ -2,7 +2,7 @@
 
 //Load
 window.addEventListener("load", function(event){
-  alert("Page is Loaded");
+  console.log("Page is Loaded");
 
   window.addEventListener("resize", function(event) {
     console.log(`Window was resized to ${window.innerWidth} x ${window.innerHeight}`);
