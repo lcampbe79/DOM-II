@@ -2,7 +2,7 @@
 
 //Load
 window.addEventListener("load", function(event){
-  alert("Page is Loaded");
+  console.log("Page is Loaded");
 
   window.addEventListener("resize", function(event) {
     console.log(`Window was resized to ${window.innerWidth} x ${window.innerHeight}`);
@@ -18,7 +18,7 @@ logoFunBus.addEventListener("click", function(event){
   }, 200);
 })
 
-//Mousover
+//Mouseover
 const navBarItems = document.querySelectorAll(".nav a");
 navBarItems.forEach(function(navItem) {
   navItem.addEventListener("mouseover", function(event) {
@@ -55,7 +55,30 @@ window.addEventListener('scroll', function(event) {
 });
 
 //DoubleClick
-const adventureAwaits = document.querySelector(".img-content");
-adventureAwaits.addEventListener("dblclick", function(event) {
+
+
+const adventureAwaits = document.querySelector(".img-content img");
+
+adventureAwaits.addEventListener('dblclick', function(event) {
   adventureAwaits.style.display = "none";
 })
+
+
+
+
+
+// adventureAwaits.addEventListener("dblclick", function(event) {
+//   adventureAwaits.style.display = "none";
+// })
+
+// class HiddenImg {
+//   constructor(img)
+//   this
+// }
+
+// const adventureAwaitsImg = document.querySelector(".img-content");
+
+// adventureAwaitsImg.forEach((hiddenImg) => {
+//   return new HiddenImg(img);
+// })
+
